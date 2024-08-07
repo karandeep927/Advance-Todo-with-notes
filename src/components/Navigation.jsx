@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import GetStart from "../pages/GetStart";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
@@ -9,10 +9,10 @@ function Navigation() {
   return (
     <HashRouter>
         <Routes>
+          <Route path={"/dashboard"} element={<Dashboard />} />
           <Route path={"/"} element={<GetStart />} />
           <Route path={"/signup"} element={<SignUp />} />
           <Route path={"/login"} element={<Login />} />
-          <Route path={"/dashboard"} element={<Dashboard />} />
           <Route path={"*"} element={<Offlinepage/>}/>
         </Routes>
       </HashRouter>
