@@ -2,7 +2,9 @@ import React, { useContext, useState } from 'react'
 import { BUTTON_BG } from '../constants/color';
 import Button from './Button';
 import { dataContext } from '../context/store';
-import {CALENDER_ICN} from '../constants/icons'
+import {CALENDER_ICN} from '../constants/icons';
+import PropTypes from 'prop-types';
+
 
 function Task({task}) {
     
@@ -27,5 +29,13 @@ function Task({task}) {
         </div>
     )
 }
+
+Task.propTypes = {
+    task: PropTypes.shape({
+      id: PropTypes.PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      deadline: PropTypes.string.isRequired,
+    }).isRequired,
+  };
 
 export default Task

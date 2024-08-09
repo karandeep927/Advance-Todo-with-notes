@@ -1,10 +1,8 @@
 import { SIDE_BAR_COLOR, SIDE_BAR_TEXT_COLOR } from "../constants/color";
-import Button from "../components/Button";
-import ListItem from "../components/ListItem";
-import { useState } from "react";
 import { ListData as List, TasksData as Tasks } from "../constants/SideBarData";
-import { PLUS_ICN, MENU_ICN, CROSS_ICN } from "../constants/icons";
-
+import { MENU_ICN, CROSS_ICN } from "../constants/icons";
+import ListItem from "../components/ListItem";
+import PropTypes from 'prop-types'
 
 function SideBar({isVisible,setVisibility,selectedTab,setSelectedTab}) {
   const handleSidebarVisibility = ()=>{
@@ -57,7 +55,12 @@ function SideBar({isVisible,setVisibility,selectedTab,setSelectedTab}) {
   );
 }
 
-
+SideBar.propTypes = {
+  isVisible: PropTypes.bool.isRequired,
+  setVisibility: PropTypes.func.isRequired,
+  selectedTab: PropTypes.PropTypes.number.isRequired,
+  setSelectedTab: PropTypes.func.isRequired,
+};
 
 export default SideBar;
 
