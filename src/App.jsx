@@ -35,7 +35,7 @@ function App() {
     }
     
     const deleteNote =(id)=>{
-      const newData = tasksData.filter((task) => task.id !== id)
+      const newData = notes.filter((note) => note.id !== id)
       setNotes([...newData])
     }
   return (

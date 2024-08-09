@@ -3,6 +3,7 @@ import StickyWall from '../components/StickyWall'
 import Upcoming from '../components/Upcoming'
 import Today from '../components/Today';
 import CalendarTab from '../components/CalendarTab';
+import PropTypes from 'prop-types';
 
 function RightSide({isVisible,selectedTab}) {
   const TabId = selectedTab;
@@ -30,4 +31,9 @@ function RightSide({isVisible,selectedTab}) {
     </div>
   )
 }
+RightSide.propTypes = {
+  isVisible: PropTypes.bool.isRequired,
+  selectedTab:PropTypes.number.isRequired,
+}
+
 export default RightSide    

@@ -1,11 +1,6 @@
-import React, { useState } from 'react'
-import Calendar from 'react-calendar'
-
+import React from 'react'
 
 function CalendarTab() {
-  
-  const [date,setDate] = useState(new Date())
-  console.log(date.getDate())
   return (
     <>
       <h1 className="text-3xl font-bold mb-3">Calendar</h1>
