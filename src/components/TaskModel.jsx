@@ -4,10 +4,11 @@ import Button from './Button';
 import { SECOND_BUTTON_BG, BUTTON_BG } from '../constants/color';
 import PropTypes from 'prop-types';
 
-function TaskModel({ visibility, setVisibility, taskDate }) {
+function TaskModel({ visibility, setVisibility, taskDate, taskTag }) {
     const { addTask } = useContext(dataContext);
     const [title, setTitle] = useState('');
     const [deadline, setDeadline] = useState(taskDate);
+    const [tag, setTag] = useState(taskTag);
     const inputRef = useRef(null);
     const buttonRef = useRef(null);
 
@@ -25,8 +26,9 @@ function TaskModel({ visibility, setVisibility, taskDate }) {
 
         if (task && deadline) {
             const id = Date.now();
-            addTask({ id, title: task, deadline });
+            addTask({ id, title: task, deadline, tag });
             setTitle('');
+            setTag('');
         }
         toggleModel();
     };
@@ -42,6 +44,10 @@ function TaskModel({ visibility, setVisibility, taskDate }) {
             inputRef.current.focus();
         }
     }, [visibility]);
+
+    useEffect(() => {
+        setTag(taskTag);
+    }, [taskTag]);
 
     return (
         <div className={`w-full h-screen bg-transparent flex justify-center items-center absolute -top-20 left-0 ${!visibility ? 'hidden' : null}`}>
@@ -66,6 +72,12 @@ function TaskModel({ visibility, setVisibility, taskDate }) {
                     onChange={(e) => setDeadline(e.target.value)}
                     className="input-box"
                 />
+                <label className='text-2xl font-bold'>Select Tag</label>
+                <select onChange={(e) => setTag(e.target.value)} value={tag} className='input-box'>
+                    <option value="0">Select tag</option>
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                </select>
                 <div className='flex-1 flex items-end gap-5 self-end'>
                     <Button title="Cancel" color={SECOND_BUTTON_BG} handler={toggleModel} />
                     <Button title="Add" ref={buttonRef} color={BUTTON_BG} handler={() => handleTask(title)} />
@@ -79,6 +91,7 @@ TaskModel.propTypes = {
     visibility: PropTypes.bool.isRequired,
     setVisibility: PropTypes.func.isRequired,
     taskDate: PropTypes.string,
+    taskTag: PropTypes.string,
 };
 
 export default TaskModel;

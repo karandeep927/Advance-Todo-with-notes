@@ -43,8 +43,10 @@ function SideBar({isVisible,setVisibility,selectedTab,setSelectedTab}) {
               <ListItem
                 key={item.id}
                 title={item.title}
-                color={item.color}
                 Icon={item.icon}
+                color={item.color}
+                isSelected={selectedTab === item.id ? true : false}
+                onclick={() => setSelectedTab(item.id)}
               />
             );
           })}

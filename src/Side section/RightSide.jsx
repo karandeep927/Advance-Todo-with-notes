@@ -21,6 +21,10 @@ function RightSide({isVisible,selectedTab}) {
         return <CalendarTab/>
       case 4:
         return <StickyWall/>
+      case 5:
+        return <Today title='personal'/>
+      case 6:
+          return <Today title='work'/>
     }
   }
   return (

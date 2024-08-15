@@ -2,8 +2,8 @@ import { RIGHT_ARROW_ICN,BOX_ICN,CALENDER_ICN,STICKY_NOTE_ICN,TODO_ICN} from "..
 
 
 export const ListData = [
-    { id: 1, title: "Personal", color: "blue" ,icon:BOX_ICN},
-    { id: 2, title: "Work", color: "red" ,icon:BOX_ICN},
+    { id: 5, title: "Personal", color: "blue" ,icon:BOX_ICN},
+    { id: 6, title: "Work", color: "red" ,icon:BOX_ICN},
   ];
  export const TasksData = [
     { id: 1, title: "Upcoming", icon: RIGHT_ARROW_ICN },
