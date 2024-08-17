@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState,useMemo } from 'react';
 import AddTask from './AddTask';
 import Task from './Task';
 import { dataContext } from '../context/store';
@@ -11,7 +11,7 @@ function Today({ title }) {
   const [visibility, setVisibility] = useState(false);
   const [count, setCount] = useState(0);
   let taskDate = today;
-  let filteredTasks = [];
+  let filteredTasks = useMemo(()=>[],[]);
   let taskTag = '0';
 
   const dataFilter = (data, label, value) => {

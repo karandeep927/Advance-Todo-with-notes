@@ -11,6 +11,7 @@ const Button = forwardRef(({title,color,handler=null,Icon=null },ref) => {
     >{Icon !== null ? <Icon/> : null}{title}</button>
   )
 })
+
 Button.propTypes = {
   title: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,

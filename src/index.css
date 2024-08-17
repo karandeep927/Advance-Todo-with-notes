@@ -16,6 +16,7 @@
     border: 1px solid #89888879;
     border-radius: 5px;
     padding: 5px 6px;
+    width: 100%;
 }
 .input-box:focus{
     outline-color: #7f7878aa;

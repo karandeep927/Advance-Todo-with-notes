@@ -19,15 +19,17 @@ function Login() {
                 <input type="password"  placeholder='Password' className='input-box'/>
             <Link to={'/dashboard'} className='flex'><Button title={'Sign in'} color={BUTTON_BG}/></Link>
             </form>
+            {/* for later implementation
             <div className='flex justify-between items-center gap-3'>
                 <div className='border-[#e9e6e6ab] border flex-1'></div>
                 <p className='text-xl text-[#d8d7d7]'>or</p>
                 <div className='border-[#e9e6e6ab] border flex-1'></div>
-            </div>
+            </div> */}
+            {/* 
             <div className='flex justify-between gap-4'>
                 <Button title={'Google'} color={SECOND_BUTTON_BG}/>
                 <Button title={'Facebook'} color={SECOND_BUTTON_BG}/>
-            </div>
+            </div> */}
             <p className='text-center'>Don't have an account? <Link to={'/signup'} className='hover:text-blue-800'>Sign up</Link></p>
             </div>
         </div>

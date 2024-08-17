@@ -35,7 +35,7 @@ function Task({task}) {
 
 Task.propTypes = {
     task: PropTypes.shape({
-      id: PropTypes.PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       deadline: PropTypes.string.isRequired,
       tag:PropTypes.string
