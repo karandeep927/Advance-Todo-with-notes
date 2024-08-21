@@ -11,7 +11,12 @@ function Model({ visibility, setVisibility }) {
     const [desc, setDescription] = useState('')
     const [newId, setNewId] = useState(Date.now())
     const inputRef = useRef(null)
-
+    const color = colorPicker()
+    function colorPicker(){
+        const colors = ['#CD5C08','#6A9C89','#1A4870','#179BAE']
+        const index = Math.floor(Math.random()*colors.length)
+        return colors[index]
+    }
     const toggleModel = () => {
         setVisibility((prev) => !prev)
         setDescription("")
@@ -25,7 +30,7 @@ function Model({ visibility, setVisibility }) {
         }
         if (title) {
             setNewId(Date.now())
-            const note = { id: newId, title: title, desc: desc }
+            const note = { id: newId, title: title, desc: desc ,color}
             addNotes(note)
         }
         toggleModel()
