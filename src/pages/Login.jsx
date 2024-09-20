@@ -17,7 +17,7 @@ function Login() {
             <form className='flex flex-col gap-7'>
                 <input type="text" placeholder='User Name'  className='input-box'/>
                 <input type="password"  placeholder='Password' className='input-box'/>
-            <Link to={'/dashboard'} className='flex'><Button title={'Sign in'} color={BUTTON_BG}/></Link>
+            <Link to={'/dashboard'} className='flex'><Button color={BUTTON_BG}>Sign in</Button></Link>
             </form>
             {/* for later implementation
             <div className='flex justify-between items-center gap-3'>

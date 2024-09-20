@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import {CROSS_ICN} from "../constants/icons"
 import { dataContext } from '../context/store';
 import PropTypes from 'prop-types';

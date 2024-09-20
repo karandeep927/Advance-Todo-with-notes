@@ -21,7 +21,7 @@ function GetStart() {
             goals. projects and tasks.
           </p>
           <Link to="/signup" className="flex my-2">
-            <Button title={"Get Started"} color={BUTTON_BG} />
+            <Button color={BUTTON_BG} >Get Started</Button>
           </Link>
           <p className="text-center">
             Already have an account? <Link to={"/login"} className='hover:text-blue-800'>Sign in</Link>

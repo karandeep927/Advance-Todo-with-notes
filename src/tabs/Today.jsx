@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState,useMemo } from 'react';
-import AddTask from './AddTask';
-import Task from './Task';
+import AddTask from '../components/AddTask';
+import Task from '../components/Task';
 import { dataContext } from '../context/store';
-import TaskModel from './TaskModel';
+import TaskModel from '../components/TaskModel';
 import { today, tomorrow } from '../utils/dates';
 import PropTypes from 'prop-types';
 
@@ -58,7 +58,7 @@ function Today({ title }) {
   return (
     <>
       <TaskModel visibility={visibility} setVisibility={setVisibility} taskDate={taskDate} taskTag={taskTag} />
-      <h1 className="text-3xl font-bold mb-3 capitalize inline-block">{title}</h1>
+      <h1 className="sm:text-3xl text-2xl font-bold mb-3 capitalize inline-block">{title}</h1>
       <span className="mx-5 text-3xl shadow p-1">{count}</span>
       <div className="flex gap-2 flex-wrap rounded w-full mt-2">
         <AddTask setVisibility={setVisibility} />

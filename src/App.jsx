@@ -1,6 +1,6 @@
-import React,{useState,useEffect} from "react";
+import {useState,useEffect} from "react";
 import { Provider } from "./context/store";
-import Navigation from "./components/Navigation";
+import Navigation from "./pages/Navigation";
 
 function App() {
   const [tasksData,setTaskData] =  useState(()=>{

@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
-import Card from "./Card";
-import Model from "./Model";
+import  { useContext, useState } from "react";
+import Card from "../components/Card";
+import Model from "../components/Model";
 import { PLUS_ICN } from "../constants/icons";
 import { dataContext } from "../context/store";
 
@@ -14,7 +14,7 @@ function StickyWall() {
   return (
     <>
       <Model visibility={visibility} setVisibility={setVisibility}/>
-      <h1 className="text-3xl font-bold mb-3">Sticky Wall</h1>
+      <h1 className="sm:text-3xl text-2xl font-bold mb-3">Sticky Wall</h1>
       <div className="flex items-start gap-2 flex-wrap shadow-md border-[1px] rounded p-9 w-full">
         <div
           className="h-56 max-w-52 rounded text-slate-50 flex-1 flex items-center justify-center cursor-pointer bg-slate-500"

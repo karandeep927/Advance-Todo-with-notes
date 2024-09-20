@@ -11,15 +11,16 @@ function SideBar({isVisible,setVisibility,selectedTab,setSelectedTab}) {
   const MENU = isVisible ? CROSS_ICN :MENU_ICN;
   return (
     <div
-      style={{ background: SIDE_BAR_COLOR }}
-      className={` min-w-64 min-h-full px-5 py-3 rounded-lg my-1 transition-all duration-300 ease-in-out ${isVisible ? 'ml-0' : '-ml-52'}`}
+    style={{ background: SIDE_BAR_COLOR }}
+    className={`min-w-64 h-full absolute px-5 py-3 rounded-lg my-1 transition-all duration-300 ease-in-out sm:relative z-10 ${isVisible ? 'ml-0' : '-ml-52'}`}
     >
-      <div className="flex justify-between items-center">
-        <h1 className="font-bold text-xl">Menu</h1>
-        <MENU size={"1.2rem"} className="cursor-pointer" onClick={handleSidebarVisibility}/>
-      </div>
-      <section>
-        <h2 className="">Tasks</h2>
+    <MENU size={25} className="cursor-pointer absolute right-3 top-6 " onClick={handleSidebarVisibility}/>
+      <div className='w-full'>
+        <h1 className='font-bold text-3xl leading-none'>Task-Mate</h1>
+        <p className='capitalize text-sm text-slate-400'>complete before deadline</p>
+    </div>
+      <section className="mt-4">
+        <h2 className="text-xl font-bold">Tasks</h2>
         <div className="">
           {Tasks.map((task) => {
             return (

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef, useEffect } from 'react';
+import { useState, useContext, useRef, useEffect } from 'react';
 import { dataContext } from '../context/store';
 import Button from './Button';
 import { SECOND_BUTTON_BG, BUTTON_BG } from '../constants/color';
@@ -51,8 +51,8 @@ function TaskModel({ visibility, setVisibility, taskDate, taskTag }) {
 
     return (
         <div className={`w-full h-screen bg-transparent flex justify-center items-center absolute -top-20 left-0 ${!visibility ? 'hidden' : null}`}>
-            <div className='w-3/6 h-3/4 rounded p-5 bg-white shadow-md border flex flex-col gap-4'>
-                <h1 className='font-bold text-3xl text-center'>Add Notes</h1>
+            <div className='sm:w-96 w-80 p-5 bg-white shadow-md border flex flex-col gap-4'>
+                <h1 className='font-bold text-2xl sm:text-3xl text-center'>Add Notes</h1>
                 <label htmlFor="title" className='text-2xl font-bold'>Title</label>
                 <input
                     type="text"
@@ -64,7 +64,7 @@ function TaskModel({ visibility, setVisibility, taskDate, taskTag }) {
                     onChange={(e) => setTitle(e.target.value)}
                     className="input-box"
                 />
-                <label htmlFor="deadline" className='text-2xl font-bold'>Add Deadline of Task</label>
+                <label htmlFor="deadline" className='text-2xl sm:text-3xl font-bold'>Add Deadline of Task</label>
                 <input
                     type="date"
                     name="deadline"
@@ -72,15 +72,15 @@ function TaskModel({ visibility, setVisibility, taskDate, taskTag }) {
                     onChange={(e) => setDeadline(e.target.value)}
                     className="input-box"
                 />
-                <label className='text-2xl font-bold'>Select Tag</label>
+                <label className='text-2xl sm:text-3xl font-bold'>Select Tag</label>
                 <select onChange={(e) => setTag(e.target.value)} value={tag} className='input-box'>
                     <option value="0">Select tag</option>
                     <option value="work">Work</option>
                     <option value="personal">Personal</option>
                 </select>
                 <div className='flex-1 flex items-end gap-5 self-end'>
-                    <Button title="Cancel" color={SECOND_BUTTON_BG} handler={toggleModel} />
-                    <Button title="Add" ref={buttonRef} color={BUTTON_BG} handler={() => handleTask(title)} />
+                    <Button color={SECOND_BUTTON_BG} handler={toggleModel} >Cancel</Button>
+                    <Button ref={buttonRef} color={BUTTON_BG} handler={() => handleTask(title)} >Add</Button>
                 </div>
             </div>
         </div>

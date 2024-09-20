@@ -1,8 +1,7 @@
-import React from 'react'
-import StickyWall from '../components/StickyWall'
-import Upcoming from '../components/Upcoming'
-import Today from '../components/Today';
-import CalendarTab from '../components/CalendarTab';
+import StickyWall from '../tabs/StickyWall'
+import Upcoming from '../tabs/Upcoming'
+import Today from '../tabs/Today';
+import CalendarTab from '../tabs/CalendarTab';
 import PropTypes from 'prop-types';
 
 function RightSide({isVisible,selectedTab}) {
@@ -28,7 +27,7 @@ function RightSide({isVisible,selectedTab}) {
     }
   }
   return (
-    <div className='p-3 transition-all duration-300 ease-in-out relative' style={RightSideStyle}>
+    <div className='p-3 ml-10 sm:ml-0 transition-all duration-300 ease-in-out relative overflow-x-hidden' style={RightSideStyle}>
       {
         handleTabs()
       }

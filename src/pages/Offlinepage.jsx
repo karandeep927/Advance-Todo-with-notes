@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Offlinepage() {
   return (
     <div className='flex flex-col items-center justify-center h-screen font-bold'>

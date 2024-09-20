@@ -1,4 +1,3 @@
-import React from 'react'
 import { SELECTED_OPT_COLOR } from '../constants/color'
 import PropTypes from 'prop-types'
 

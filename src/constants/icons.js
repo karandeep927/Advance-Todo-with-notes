@@ -1,13 +1,13 @@
 import { GoPlus } from "react-icons/go";
 import { RiCheckboxBlankFill } from "react-icons/ri";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { MdKeyboardDoubleArrowRight, MdDelete } from "react-icons/md";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaNoteSticky } from "react-icons/fa6";
 import { FaListCheck } from "react-icons/fa6";
 import { MdSearch } from "react-icons/md";
 import { TfiMenu } from "react-icons/tfi";
 import { RxCross2 } from "react-icons/rx";
-
+import { IoMdEye,IoMdEyeOff } from "react-icons/io";
 
 export const PLUS_ICN = GoPlus;
 export const BOX_ICN = RiCheckboxBlankFill;
@@ -18,3 +18,6 @@ export const TODO_ICN = FaListCheck;
 export const SEARCH_ICN = MdSearch;
 export const MENU_ICN = TfiMenu;
 export const CROSS_ICN = RxCross2;
+export const OPEN_EYE = IoMdEye;
+export const CLOSED_EYE = IoMdEyeOff;
+export const DELETE = MdDelete;

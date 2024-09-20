@@ -1,9 +1,9 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
-import GetStart from "../pages/GetStart";
-import Login from "../pages/Login";
-import SignUp from "../pages/SignUp";
-import Dashboard from "../pages/Dashboard";
-import Offlinepage from "../pages/Offlinepage";
+import GetStart from "./GetStart";
+import Login from "./Login";
+import SignUp from "./SignUp";
+import Dashboard from "./Dashboard";
+import Offlinepage from "./Offlinepage";
 
 function Navigation() {
   return (

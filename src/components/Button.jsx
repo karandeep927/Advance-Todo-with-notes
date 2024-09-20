@@ -1,22 +1,22 @@
-import React,{forwardRef} from 'react'
+import {forwardRef} from 'react'
 import PropTypes from 'prop-types'
 
-const Button = forwardRef(({title,color,handler=null,Icon=null },ref) => {
+const Button = forwardRef(({color,handler=null,Icon=null,className,children},ref) => {
     return (
     <button 
     ref={ref}
     onClick={handler}
     style={{background:color}}
-    className={`px-6 py-2 border-transparent rounded sm:flex-1`}
-    >{Icon !== null ? <Icon/> : null}{title}</button>
+    className={`px-6 py-2 border-transparent rounded flex-1 ${className}`}
+    >{Icon !== null ? <Icon size={25} /> : null}{children}</button>
   )
 })
 
 Button.propTypes = {
-  title: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   handler: PropTypes.func,
   Icon: PropTypes.elementType,
+  className: PropTypes.string,
 };
 
 export default Button
